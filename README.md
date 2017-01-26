@@ -6,6 +6,13 @@ This is the readme file of the first homework (HW) of the SLAM course of the UVI
 
 The objective of this HW is to build a ROS node that integrates motion data into a odometry trajectory, and also into motion factors to be used in a factor graph.
 
+## Related documentation
+
+PDF of the course:
+
+http://www.iri.upc.edu/people/jsola//JoanSola/objectes/toolbox/graphSLAM.pdf
+
+
 ## Rationale
 
 We basically integrate motion to produce two kinds of data: 
@@ -277,8 +284,3 @@ The reset involves the pose increment `D` and its covariance `C_D`,
           | 0 0 0 |
 ```
 
-## Related documentation
-
-PDF of the course:
-
-http://www.iri.upc.edu/people/jsola//JoanSola/objectes/toolbox/graphSLAM.pdf
