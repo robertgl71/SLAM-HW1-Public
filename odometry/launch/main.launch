@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="odometry" type="odometry" name="odometry" output="screen"/>
+  <node pkg="odometry" type="odometry_tf" name="odometry_tf" output="screen"/>
+  <node name="rviz" type="rviz" pkg="rviz" args="-d $(find odometry)/rviz_cfg/odometry.rviz"/>
+</launch>
