@@ -1,4 +1,4 @@
-# SLAM-HW1-Private
+# SLAM-HW1-Public
 
 ## Introduction
 
