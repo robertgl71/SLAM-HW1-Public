@@ -10,7 +10,7 @@ The objective of this HW is to build a ROS node that integrates motion data into
 
 PDF of the course:
 
-http://www.iri.upc.edu/people/jsola//JoanSola/objectes/toolbox/graphSLAM.pdf
+http://www.iri.upc.edu/people/jsola//JoanSola/objectes/toolbox/courseSLAM.pdf
 
 
 ## Rationale
