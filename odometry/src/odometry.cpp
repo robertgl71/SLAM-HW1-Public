@@ -52,7 +52,8 @@ public:
       current_time   = ros::Time::now();
       double delta_t = (current_time - last_time).toSec();
 
-      //### Placeholder Variable Initialization ###
+      //### Placeholder Variable Initializations ###
+      // This is not where these variables should live.
       double delta_x  = 0;
       double delta_y  = 0;
       double delta_th = 0;
