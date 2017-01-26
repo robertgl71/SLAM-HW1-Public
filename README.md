@@ -277,3 +277,8 @@ The reset involves the pose increment `D` and its covariance `C_D`,
           | 0 0 0 |
 ```
 
+## Related documentation
+
+PDF of the course:
+
+http://www.iri.upc.edu/people/jsola//JoanSola/objectes/toolbox/graphSLAM.pdf
