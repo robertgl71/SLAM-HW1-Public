@@ -129,12 +129,9 @@ public:
       C_D_pub.publish(create_covariance_msg(C_D));
       global_pub.publish(create_pose_msg(x, y, th));
 
-      if(vReset < 30)	vReset++;
+      if(vReset < integ_Steps)	vReset++;
       else{
-    	  Delta_x = 0;
-    	  Delta_y = 0;
-    	  Delta_th = 0;
-    	  C_D = Eigen::Matrix3d::Zero(3, 3);
+    	  keyframe_callback();
     	  vReset = 0;
       }
 
@@ -151,12 +148,12 @@ public:
      // DS: C_D_pub.publish(create_covariance_msg(C_D));
 
      //### Keyframe reset: factor pose increment ###
-     //Delta_x  = 0.0;
-     //Delta_y  = 0.0;
-     //Delta_th = 0.0;
+     Delta_x  = 0.0;
+     Delta_y  = 0.0;
+     Delta_th = 0.0;
 
      //### Keyframe reset: factor pose increment's covariance ###
-     //C_D = Eigen::Matrix3d::Zero(3, 3);
+     C_D = Eigen::Matrix3d::Zero(3, 3);
    }
 
 private:
@@ -170,6 +167,7 @@ private:
   double Delta_x, Delta_y, Delta_th;
 
   int vReset;
+  int integ_Steps = 10;
 
   geometry_msgs::Pose create_pose_msg(double x, double y, double th) {
     geometry_msgs::Quaternion pose_quat = tf::createQuaternionMsgFromYaw(th);
